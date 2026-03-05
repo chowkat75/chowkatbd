@@ -36,7 +36,7 @@ const initialProducts = {
     {
       id: 3,
       name: 'Bougainvillea Elegance (বাগান বিলাস) Hand Painted Panjabi',
-      price: 750,
+      price: 1999,
       image:
         'https://i.ibb.co.com/CTymhqC/SON07112-jpg.jpg',
       sizes: ['M/40', 'L/42', 'Xl/44'],
@@ -44,7 +44,7 @@ const initialProducts = {
     {
       id: 4,
       name: 'Royal Poinciana Flame (কৃষ্ণচূড়া) Hand Painted Panjabi',
-      price: 750,
+      price: 1999,
       image:
         'https://i.ibb.co.com/20VXmV2j/SON07121-jpg.jpg',
       sizes: ['M/40', 'L/42', 'Xl/44'],
