@@ -23,7 +23,7 @@ const initialProducts = {
       price: 1999,
       image:
         'https://ibb.co.com/Xk37qWBM',
-      sizes: ['M/40', 'L/42', 'Xl/44' 'Xll/46'],
+      sizes: ['M/40', 'L/42', 'Xl/44'],
     },
     {
       id: 2,
