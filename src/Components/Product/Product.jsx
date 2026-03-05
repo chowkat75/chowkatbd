@@ -27,34 +27,26 @@ const initialProducts = {
     },
     {
       id: 2,
-      name: 'Maroon color Panjabi',
-      price: 750,
+      name: 'Hyacinth Bloom (কচুরিপানা ফুল) Hand Painted Panjabi',
+      price: 1999,
       image:
-        'https://www.kaykraft.com/wp-content/uploads/2024/01/PNJ-EA-LG-138-A-600x900.jpg',
+        'https://i.ibb.co.com/qY3Y6t7y/SON07224-jpg.jpg',
       sizes: ['M/40', 'L/42', 'Xl/44'],
     },
     {
       id: 3,
-      name: 'Mint color Panjabi',
+      name: 'Bougainvillea Elegance (বাগান বিলাস) Hand Painted Panjabi',
       price: 750,
       image:
-        'https://designermegamall.com/wp-content/uploads/2024/04/Panjabi-3.jpg',
+        'https://i.ibb.co.com/CTymhqC/SON07112-jpg.jpg',
       sizes: ['M/40', 'L/42', 'Xl/44'],
     },
     {
       id: 4,
-      name: 'White Color Panjabi',
+      name: 'Royal Poinciana Flame (কৃষ্ণচূড়া) Hand Painted Panjabi',
       price: 750,
       image:
-        'https://cdn.othoba.com/images/thumbs/0756308_stylish-premium-quality-panjabi.jpeg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
-    },
-    {
-      id: 5,
-      name: 'Black Color Panjabi',
-      price: 750,
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlvdfHRANb3o_ICQih-kLoP6nisPciSukiLQ&s',
+        'https://i.ibb.co.com/20VXmV2j/SON07121-jpg.jpg',
       sizes: ['M/40', 'L/42', 'Xl/44'],
     },
   ],
