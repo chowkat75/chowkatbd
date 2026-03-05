@@ -19,11 +19,11 @@ const initialProducts = {
   Panjabi: [
     {
       id: 1,
-      name: 'Navy blue',
-      price: 750,
+      name: 'Marigold Aura (গাঁদা ফুল) Hand Painted Panjabi',
+      price: 1999,
       image:
-        'https://cdn.kaykraft.com/wp-content/uploads/2025/03/PNJ-CT-LG-1402-600x900.jpg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+        'https://ibb.co.com/Xk37qWBM',
+      sizes: ['M/40', 'L/42', 'Xl/44' 'Xll/46'],
     },
     {
       id: 2,
