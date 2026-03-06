@@ -23,7 +23,7 @@ const initialProducts = {
       price: 750,
       image:
         'https://cdn.kaykraft.com/wp-content/uploads/2025/03/PNJ-CT-LG-1402-600x900.jpg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+      sizes: ['M/40', 'L/42', 'Xl/44', 'Xll/46'],
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const initialProducts = {
       price: 750,
       image:
         'https://www.kaykraft.com/wp-content/uploads/2024/01/PNJ-EA-LG-138-A-600x900.jpg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+      sizes: ['M/40', 'L/42', 'Xl/44', 'Xll/46'],
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const initialProducts = {
       price: 750,
       image:
         'https://designermegamall.com/wp-content/uploads/2024/04/Panjabi-3.jpg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+      sizes: ['M/40', 'L/42', 'Xl/44', 'Xll/46'],
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const initialProducts = {
       price: 750,
       image:
         'https://cdn.othoba.com/images/thumbs/0756308_stylish-premium-quality-panjabi.jpeg',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+      sizes: ['M/40', 'L/42', 'Xl/44', 'Xll/46'],
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ const initialProducts = {
       price: 750,
       image:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlvdfHRANb3o_ICQih-kLoP6nisPciSukiLQ&s',
-      sizes: ['M/40', 'L/42', 'Xl/44'],
+      sizes: ['M/40', 'L/42', 'Xl/44', 'Xll/46'],
     },
   ],
 };
@@ -269,7 +269,7 @@ function ProductPage() {
 
                     {product.sizes.length > 0 && (
                       <div className="mb-3 sm:mb-4">
-                        <div className="grid grid-cols-3 gap-1 mb-1">
+                        <div className="grid grid-cols-4 gap-1 mb-1">
                           {product.sizes.map(size => (
                             <motion.button
                               key={size}
@@ -619,8 +619,9 @@ function ProductPage() {
                     animate={{ scale: [1, 1.02, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    Total: ৳ {totalPrice}
+                    Total: {totalPrice} TK
                   </motion.div>
+                  <h1>Delivery charge 120 taka and cash on delivery</h1>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
