@@ -2,7 +2,7 @@ const Banner = () => {
   return (
     <div className="w-full">
       <img
-        src="https://i.ibb.co/4nx0V3kW/Gemini-Generated-Image-6no43d6no43d6no4.png"
+        src="https://i.ibb.co.com/fGFQNY39/hero-section-low-jpg.jpg"
         alt="Banner"
         className="w-full h-auto object-cover"
       />
