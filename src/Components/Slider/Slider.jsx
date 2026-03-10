@@ -1,45 +1,13 @@
 const Banner = () => {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <img
         src="https://i.ibb.co.com/fGFQNY39/hero-section-low-jpg.jpg"
         alt="Banner"
-        className="w-full h-auto object-cover"
+        className="w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[750px] object-cover"
       />
     </div>
   );
 };
 
 export default Banner;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//import banner from '../../assets/img/banner.jpg';
-//const Banner = () => {
-  //return (
-    //<div className="w-full">
-      //<img src={banner} alt="Banner" className="w-full h-auto object-cover" />
-    //</div>
- // );
-//};
-
-//export default Banner;
-
