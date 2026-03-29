@@ -22,7 +22,7 @@ const initialProducts = {
       id: 1,
       name: 'Premium Hand Painted Cotton Saree',
       price: 2500, // আপনার পছন্দমতো দাম বসিয়ে নিন
-      image: 'https://i.ibb.co.com/Rk8hQkBD/SHA09252-jpg.jpg, // এখানে শাড়ির ইমেজের লিংক দিন
+      image: 'https://i.ibb.co.com/Rk8hQkBD/SHA09252-jpg.jpg', // এখানে শাড়ির ইমেজের লিংক দিন
       sizes: [], // শাড়ির জন্য সাইজ খালি রাখা হয়েছে
     },
   ],
