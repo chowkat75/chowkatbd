@@ -16,13 +16,13 @@ import {
 } from 'lucide-react';
 
 const initialProducts = {
-  Saree: [ // ক্যাটাগরি নাম Saree করা হয়েছে
+  Panjabi: [
     {
       id: 1,
-      name: 'Premium Hand Painted Saree', // আপনার শাড়ির নাম দিন
-      price: 2500, // আপনার শাড়ির প্রাইস দিন
-      image: 'https://i.ibb.co.com/Rk8hQkBD/SHA09252-jpg.jpg', // শাড়ির ইমেজের লিংক দিন
-      sizes: [], // সাইজ অপশন রিমুভ করা হয়েছে
+      name: 'Marigold Aura (গাঁদা ফুল) Hand Painted Panjabi',
+      price: 2999,
+      image: 'https://i.ibb.co.com/Rk8hQkBD/SHA09252-jpg.jpg',
+      sizes: [], // Sizes removed
     },
   ],
 };
@@ -42,14 +42,7 @@ function ProductPage() {
 
   // Cart functions
   const addToCart = product => {
-    if (product.sizes.length > 0) {
-      const selectedSize = selectedSizes[product.id];
-      if (!selectedSize) {
-        alert('Please select a size for this Panjabi');
-        return;
-      }
-    }
-
+    // Size check logic removed for direct add to cart
     const exists = cart.find(item => item.id === product.id);
     if (exists) {
       setCart(
@@ -63,7 +56,7 @@ function ProductPage() {
       const newItem = {
         ...product,
         quantity: 1,
-        size: product.sizes.length > 0 ? selectedSizes[product.id] : null,
+        size: null, // Size is now always null
       };
       setCart([...cart, newItem]);
     }
@@ -116,7 +109,7 @@ function ProductPage() {
           phone: customerInfo.number,
           address: customerInfo.address,
           product: item.name,
-          size: item.size || 'N/A',
+          size: 'N/A', // Default to N/A
           quantity: item.quantity,
           total: item.price * item.quantity,
         }),
@@ -196,7 +189,6 @@ function ProductPage() {
                     transition: { type: 'spring', stiffness: 400, damping: 17 },
                   }}
                 >
-                  {/* Image container - only this triggers the hover effect */}
                   <div
                     className="h-40 sm:h-48 overflow-hidden flex-shrink-0 relative cursor-zoom-in"
                     onMouseEnter={e => handleImageHover(product, e)}
@@ -213,7 +205,6 @@ function ProductPage() {
                     />
                   </div>
 
-                  {/* Product details - interactive area */}
                   <div className="p-3 sm:p-4 flex flex-col flex-1">
                     <motion.h3
                       className="font-semibold text-gray-800 text-sm sm:text-base mb-1 sm:mb-2 line-clamp-2"
@@ -234,49 +225,13 @@ function ProductPage() {
                       </span>
                     </div>
 
-                    {product.sizes.length > 0 && (
-                      <div className="mb-3 sm:mb-4">
-                        <div className="grid grid-cols-4 gap-1 mb-1">
-                          {product.sizes.map(size => (
-                            <motion.button
-                              key={size}
-                              onClick={() => handleSizeSelect(product.id, size)}
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className={`py-1.5 rounded text-xs font-medium transition-all ${
-                                selectedSizes[product.id] === size
-                                  ? 'bg-gradient-to-r from-[#5a189a] to-[#9d4edd] text-white shadow-sm'
-                                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                              }`}
-                            >
-                              {size}
-                            </motion.button>
-                          ))}
-                        </div>
-                        <div className="h-5">
-                          {!selectedSizes[product.id] && (
-                            <motion.p
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              className="text-xs text-red-500"
-                            >
-                              Select size
-                            </motion.p>
-                          )}
-                        </div>
-                      </div>
-                    )}
-
                     <div className="flex-1"></div>
 
                     <motion.button
                       onClick={() => addToCart(product)}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-gradient-to-r from-[#5a189a] to-[#9d4edd] text-white font-semibold py-2 sm:py-3 rounded-md hover:from-[#6a299a] hover:to-[#ad5eed] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed mt-auto"
-                      disabled={
-                        product.sizes.length > 0 && !selectedSizes[product.id]
-                      }
+                      className="w-full bg-gradient-to-r from-[#5a189a] to-[#9d4edd] text-white font-semibold py-2 sm:py-3 rounded-md hover:from-[#6a299a] hover:to-[#ad5eed] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base mt-auto"
                     >
                       <ShoppingCart size={14} /> Add to Cart
                     </motion.button>
@@ -287,7 +242,7 @@ function ProductPage() {
           </div>
         ))}
 
-        {/* Enhanced Floating Image - Code remains exact same */}
+        {/* Floating Image components remain the same for UI quality */}
         <AnimatePresence>
           {hoveredProduct && (
             <>
@@ -412,7 +367,7 @@ function ProductPage() {
           )}
         </AnimatePresence>
 
-        {/* Checkout Section - Code remains exact same */}
+        {/* Checkout Section */}
         <div
           ref={checkoutRef}
           className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden"
@@ -446,6 +401,7 @@ function ProductPage() {
               </motion.div>
             ) : (
               <>
+                {/* Cart Items */}
                 <div className="space-y-4 mb-6">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
                     Your Order ({cart.length}{' '}
@@ -473,12 +429,6 @@ function ProductPage() {
                             <h4 className="font-medium text-gray-800 text-sm sm:text-base line-clamp-1">
                               {item.name}
                             </h4>
-                            {item.size && (
-                              <p className="text-xs sm:text-sm text-gray-600 mt-0.5">
-                                Size:{' '}
-                                <span className="font-medium">{item.size}</span>
-                              </p>
-                            )}
                             <p className="text-[#5a189a] font-bold text-sm sm:text-base mt-1">
                               ৳ {item.price} × {item.quantity} = ৳{' '}
                               {item.price * item.quantity}
@@ -523,6 +473,7 @@ function ProductPage() {
                   ))}
                 </div>
 
+                {/* Customer Info */}
                 <div className="mb-6 sm:mb-8 md:mb-10">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
                     Customer Information
@@ -570,6 +521,7 @@ function ProductPage() {
                   </div>
                 </div>
 
+                {/* Total + Checkout */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-6">
                   <motion.div
                     className="text-gray-800 font-bold text-lg sm:text-xl md:text-2xl"
@@ -578,7 +530,7 @@ function ProductPage() {
                   >
                     Total: {totalPrice} TK
                   </motion.div>
-                  <h1>Delivery charge 120 taka and cash on delivery</h1>
+                  <h1 className="text-gray-700 font-medium">Delivery charge 120 taka and cash on delivery</h1>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -593,7 +545,7 @@ function ProductPage() {
           </div>
         </div>
 
-        {/* Thank You Modal - Code remains exact same */}
+        {/* Thank You Modal remains the same */}
         <AnimatePresence>
           {showThankYou && (
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
@@ -613,3 +565,42 @@ function ProductPage() {
                         size={56}
                         className="text-white"
                         strokeWidth={2.5}
+                      />
+                    </div>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-3 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                    Thank You!
+                  </h2>
+                  <p className="text-gray-500 text-lg mb-2">for your order</p>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-200 rounded-full my-4" />
+                  <p className="text-sm text-gray-400 mb-4">
+                    Order #
+                    {Math.random().toString(36).substr(2, 8).toUpperCase()}
+                  </p>
+                  <div className="flex items-center gap-2 bg-green-50 px-4 py-3 rounded-xl">
+                    <MessageCircle size={20} className="text-green-500" />
+                    <div className="flex gap-1 ml-2">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-bounce" />
+                    </div>
+                  </div>
+                  <div className="w-full bg-gray-100 h-1.5 rounded-full mt-6 overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: '100%' }}
+                      transition={{ duration: 3, ease: 'linear' }}
+                      className="h-full bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
+
+export default ProductPage;
