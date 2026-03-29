@@ -189,15 +189,16 @@ function ProductPage() {
                     transition: { type: 'spring', stiffness: 400, damping: 17 },
                   }}
                 >
+                  {/* FIXED IMAGE SIZE SECTION */}
                   <div
-                    className="h-40 sm:h-48 overflow-hidden flex-shrink-0 relative cursor-zoom-in"
+                    className="aspect-[2/3] w-full overflow-hidden flex-shrink-0 relative cursor-zoom-in"
                     onMouseEnter={e => handleImageHover(product, e)}
                     onMouseLeave={() => setHoveredProduct(null)}
                   >
                     <motion.img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover object-top"
                       whileHover={{
                         scale: 1.15,
                         transition: { duration: 0.4, ease: 'easeOut' },
@@ -588,19 +589,4 @@ function ProductPage() {
                   <div className="w-full bg-gray-100 h-1.5 rounded-full mt-6 overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: '100%' }}
-                      transition={{ duration: 3, ease: 'linear' }}
-                      className="h-full bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-      </div>
-    </div>
-  );
-}
-
-export default ProductPage;
+                      animate={{ width: '10
