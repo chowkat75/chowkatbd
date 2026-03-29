@@ -483,7 +483,7 @@ function ProductPage() {
                   <div className="text-gray-800 font-bold text-lg sm:text-xl md:text-2xl">
                     Total: {totalPrice} TK
                   </div>
-                  <h1 className="text-gray-700 font-medium">Delivery charge 120 taka and cash on delivery</h1>
+                  <h2 className="text-gray-700 font-medium">Cash On Delivery</h2>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
