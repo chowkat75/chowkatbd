@@ -19,7 +19,7 @@ const initialProducts = {
   Panjabi: [
     {
       id: 1,
-      name: 'Marigold Aura (গাঁদা ফুল) Hand Painted Panjabi',
+      name: 'কৃষ্ণচূড়া (Replica Muslin) Hand Painted Sharee',
       price: 2999,
       image: 'https://i.ibb.co.com/1fTp8dFP/Untitled-4000-x-6000-px-1.jpg',
       sizes: [], // Sizes removed
