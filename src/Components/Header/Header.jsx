@@ -65,7 +65,7 @@ export default function Header() {
                     নববর্ষের নতুন সাজে
                   </span>
                   <span className="text-gray-500">|</span>
-                  <span className="text-gray-800">ঐতিহ্যের রঙে নিজেকে রাঙান 
+                  <span className="text-gray-800">ঐতিহ্যের রঙে নিজেকে রাঙান </span>
                 </h1>
               </div>
 
