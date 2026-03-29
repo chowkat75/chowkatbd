@@ -62,18 +62,18 @@ export default function Header() {
                   "
                 >
                   <span className="bg-gradient-to-r from-[#5a189a] to-[#9d4edd] bg-clip-text text-transparent">
-                    নিজের বা প্রিয়জনের জন্য
+                    নববর্ষের নতুন সাজে
                   </span>
                   <span className="text-gray-500">|</span>
-                  <span className="text-gray-800">সেরা জিনিসটাই নিন</span>
+                  <span className="text-gray-800">ঐতিহ্যের রঙে নিজেকে রাঙান</span>
                 </h1>
               </div>
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base text-gray-600">
-                <span className="text-[#5a189a] font-medium">ভালোবাসা</span> ও{' '}
-                <span className="text-[#9d4edd] font-medium">যত্নের</span>{' '}
-                প্রতিটি মুহূর্তে
+                <span className="text-[#5a189a] font-medium">বৈশাখী কালেকশনে এবার থাকছে{' '}
+                <span className="text-[#9d4edd] font-medium">ভালোবাসার ছোঁয়া</span>{' '}
+               প্রতিটি ভাঁজেে
               </p>
             </div>
           </div>
