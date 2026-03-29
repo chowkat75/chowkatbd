@@ -21,7 +21,7 @@ const initialProducts = {
       id: 1,
       name: 'Marigold Aura (গাঁদা ফুল) Hand Painted Panjabi',
       price: 2999,
-      image: 'https://i.ibb.co.com/Rk8hQkBD/SHA09252-jpg.jpg',
+      image: 'https://i.ibb.co.com/SD4wQ3zS/SHA09252-jpg.jpg',
       sizes: [], // Sizes removed
     },
   ],
