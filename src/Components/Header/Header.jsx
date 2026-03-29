@@ -70,11 +70,11 @@ export default function Header() {
               </div>
 
               {/* Subtitle */}
-              <p className="text-sm sm:text-base text-gray-600">
-                <span className="text-[#5a189a] font-medium">বৈশাখী কালেকশনে এবার থাকছ </span>{' '}
-                <span className="text-[#9d4edd] font-medium">ভালোবাসার ছোঁয়া</span>{' '}
-               প্রতিটি ভাঁজেে
-              </p>
+<p className="text-sm sm:text-base text-gray-600">
+  <span className="text-[#5a189a] font-medium text-lg">বৈশাখী কালেকশনে এবার থাকছে</span>{' '}
+  <span className="text-[#9d4edd] font-medium text-lg text-bold">ভালোবাসার ছোঁয়া</span>{' '}
+  প্রতিটি ভাঁজে
+</p>
             </div>
           </div>
 
