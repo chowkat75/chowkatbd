@@ -65,13 +65,13 @@ export default function Header() {
                     নববর্ষের নতুন সাজে
                   </span>
                   <span className="text-gray-500">|</span>
-                  <span className="text-gray-800">ঐতিহ্যের রঙে নিজেকে রাঙান</span>
+                  <span className="text-gray-800">ঐতিহ্যের রঙে নিজেকে রাঙান 
                 </h1>
               </div>
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base text-gray-600">
-                <span className="text-[#5a189a] font-medium">বৈশাখী কালেকশনে এবার থাকছে{' '}
+                <span className="text-[#5a189a] font-medium">বৈশাখী কালেকশনে এবার থাকছ </span>{' '}
                 <span className="text-[#9d4edd] font-medium">ভালোবাসার ছোঁয়া</span>{' '}
                প্রতিটি ভাঁজেে
               </p>
