@@ -5,7 +5,7 @@ const Banner = () => {
         {/* আগের কোডের মতো শ্যাডো এবং হাইট সেট করা হয়েছে */}
         <div className="relative overflow-hidden shadow-2xl rounded-2xl h-[240px] md:h-[500px]">
           <img
-            src="https://i.ibb.co.com/Z6rJ3hyQ/web-banner-chowkat-jpg.jpg"
+            src="https://i.ibb.co.com/zT9Gt302/Untitled-design.jpg"
             alt="Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
