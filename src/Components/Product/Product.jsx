@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 const initialProducts = {
-  Panjabi: [
+  Sharee: [
     {
       id: 1,
       name: 'কৃষ্ণচূড়া (Replica Muslin) Hand Painted Sharee',
